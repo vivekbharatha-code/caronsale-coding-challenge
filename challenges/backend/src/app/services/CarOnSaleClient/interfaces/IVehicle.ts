@@ -1,0 +1,70 @@
+import IVehicleValuation from "./IVehicleValuation";
+import IFile from "./IFile";
+import IVehicleDamage from "./IVehicleDamage";
+import { IVehicleImages } from "./IVehicleImages";
+import IVehicleImage from "./IVehicleImage";
+
+/**
+ * Interface to defined Vehicle details
+ */
+export default interface IVehicle {
+    id: number;
+    ez: string;
+    make: string;
+    mileageInKm: number;
+    model: string;
+    vin: string;
+    hadAccident: boolean;
+    accidentDescription: string;
+    category: number;
+    color: string;
+    doors: number;
+    enginePowerInHp: number;
+    engineSizeInCcm: number;
+    fuelType: number;
+    transmission: number;
+    upholstery: number;
+    additional: string;
+    ac: number;
+    coupling: number;
+    headlights: number;
+    navigation: number;
+    parkingAssistance: number;
+    sportPackage: number;
+    sunRoof: number;
+    vehicleHeater: number;
+    fullServiceHistory: boolean;
+    huReportExists: boolean;
+    lastCheckAtMileage: number;
+    lastHu: string;
+    numKeys: number;
+    numPreOwners: number;
+    vatIdReportable: boolean;
+    urlToAttachment1: string;
+    urlToAttachment2: string;
+    urlToAttachment3: string;
+    additionalDamages: string;
+    estimatedValue: number;
+    vehicleValuation?: IVehicleValuation;
+    urlToVehicleSummarySheet: string;
+    isReadyToDrive: boolean;
+    euroNorm: string;
+    dimensionWidthInCm: number;
+    dimensionHeightInCm: number;
+    dimensionLengthInCm: number;
+    unloadedWeightInKg: number;
+    vehicleCondition: number;
+    numSeats: number;
+    isReimportedVehicle: boolean;
+    datBaseModelRaw: string;
+    basedOnInternalVehicleExpertReport: boolean;
+    isCreatedFromVehicleReport: boolean;
+    seriesEquipments: string[];
+    specialEquipments: string[];
+    isServiceHistoryAvailable: boolean;
+    uuid: string;
+    attachments: IFile[];
+    damages: IVehicleDamage[];
+    vehicleImages: IVehicleImage[];
+    imageUrls: IVehicleImages;
+}
